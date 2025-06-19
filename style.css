@@ -13,3 +13,11 @@ body{
             color: rgb(58, 140, 40);
             padding-top: 5px;
         }
+
+ input{
+            padding: 7px 3px;
+            color: rgb(0, 0, 0);
+        }
+        button{
+            padding: 7px;
+        }
