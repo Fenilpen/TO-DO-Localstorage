@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", ()=>{
+
 let todoInput =  document.getElementById("todo-input")
 let addTaskButton  = document.getElementById("add-task-btn")
 let todoList = document.getElementById("todo-list")
@@ -16,6 +18,7 @@ addTaskButton.addEventListener("click",()=>{
    tasks.push(newTask)
    saveTasks()
    todoInput.value = ""
+   console.log(tasks);
    
 })
 
@@ -24,5 +27,6 @@ function renderTasks(tasks){
 }
 
 function saveTasks(){
-   localStorage.setItem("tasks", JASON.stringify(tasks))
+   localStorage.setItem("tasks",JSON.stringify(tasks))
 }
+})
