@@ -19,6 +19,10 @@ addTaskButton.addEventListener("click",()=>{
    
 })
 
+function renderTasks(tasks){
+   console.log(tasks)
+}
+
 function saveTasks(){
    localStorage.setItem("tasks", JASON.stringify(tasks))
 }
