@@ -14,6 +14,11 @@ addTaskButton.addEventListener("click",()=>{
    }
 
    tasks.push(newTask)
-   console.log(tasks);
+   saveTasks()
+   todoInput.value = ""
    
 })
+
+function saveTasks(){
+   localStorage.setItem("tasks", JASON.stringify(tasks))
+}
