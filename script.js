@@ -22,8 +22,13 @@ addTaskButton.addEventListener("click",()=>{
    
 })
 
-function renderTasks(tasks){
-   console.log(tasks)
+function randerTasks(task){
+   const li = document.createElement('li')
+   li.setAttribute('data-id',task.id)
+   li.innerHTML = `<span>${task.text}</span>
+   <button>delete</button>
+   `;
+   todoList.appendChild(li)
 }
 
 function saveTasks(){
