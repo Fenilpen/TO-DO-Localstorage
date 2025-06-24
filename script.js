@@ -25,6 +25,7 @@ addTaskButton.addEventListener("click",()=>{
 function randerTasks(task){
    const li = document.createElement('li')
    li.setAttribute('data-id',task.id)
+   if (task.compeleted) li.classList.add('completed')
    li.innerHTML = `<span>${task.text}</span>
    <button>delete</button>
    `;
