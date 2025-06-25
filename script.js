@@ -12,7 +12,7 @@ addTaskButton.addEventListener("click",()=>{
    let newTask = {
     id: Date.now(),
     text: taskText,
-    compeleted : false
+    completed : false
    }
 
    tasks.push(newTask)
@@ -25,7 +25,7 @@ addTaskButton.addEventListener("click",()=>{
 function randerTasks(task){
    const li = document.createElement('li')
    li.setAttribute('data-id',task.id)
-   if (task.compeleted) li.classList.add('completed')
+   if (task.completed) li.classList.add('completed')
    li.innerHTML = `<span>${task.text}</span>
    <button>delete</button>
    `;
