@@ -29,6 +29,12 @@ function randerTasks(task){
    li.innerHTML = `<span>${task.text}</span>
    <button>delete</button>
    `;
+   li.addEventListener('click', (e) => {
+      if(e.target.button === 'BUTTON') return
+      task.completed = !task.completed
+      li.classList.toggle('completed')
+      saveTasks()
+   })
    todoList.appendChild(li)
 }
 
