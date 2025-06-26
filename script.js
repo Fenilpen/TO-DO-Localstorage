@@ -35,6 +35,11 @@ function randerTasks(task){
       li.classList.toggle('completed')
       saveTasks()
    })
+
+   li.querySelector('button').addEventListener('click',(e)=> {
+      e.stopPropagation()
+   })
+   
    todoList.appendChild(li)
 }
 
