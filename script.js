@@ -3,7 +3,9 @@ let todoInput =  document.getElementById("todo-input")
 let addTaskButton  = document.getElementById("add-task-btn")
 let todoList = document.getElementById("todo-list")
 
-let tasks = []
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []
+tasks.forEach((task) => renderTask(task))
+   
 addTaskButton.addEventListener("click",()=>{    
    let taskText = todoInput.value.trim()
    if(taskText === "") return;
