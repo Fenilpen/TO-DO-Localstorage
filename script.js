@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-
 let todoInput =  document.getElementById("todo-input")
 let addTaskButton  = document.getElementById("add-task-btn")
 let todoList = document.getElementById("todo-list")
@@ -37,7 +36,10 @@ function randerTasks(task){
    })
 
    li.querySelector('button').addEventListener('click',(e)=> {
-      e.stopPropagation()
+      e.stopPropagation() // prevent toggle from firing
+      tasks = tasks.filter(t => t.id !== task.id)
+      li.remove()
+      saveTasks()
    })
    
    todoList.appendChild(li)
