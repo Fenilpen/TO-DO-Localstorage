@@ -12,4 +12,4 @@ It works like a simple key-value store, where both the key and value must be str
 
 * The setAttribute() method in JavaScript is a powerful way to modify HTML elements dynamically. It allows you to set any valid attribute on an element, and if the attribute doesn’t exist, it creates it.
 
-li.setAttribute('data-id', task.id)
+element.setAttribute(attributeName, attributeValue);
